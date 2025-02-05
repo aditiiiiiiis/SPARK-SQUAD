@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Study learn</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Study Planner</h1>
+        <nav>
+            <ul>
+                <li><a href="#today">Today</a></li>
+                <li><a href="#week">Week</a></li>
+                <li><a href="#subjects">Subjects</a></li>
+                <li><a href="#goals">Goals</a></li>
+                <li><a href="#notes">Notes</a></li>
+                <li><a href="#calendar">Calendar</a></li>
+                <li><a href="#assessment">Assessment</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="calendar" class="planner-section">
+            <h2>Calendar</h2>
+            <div id="study-calendar"></div>
+            <div id="data-container"></div>
+        </section>
+
+        <section id="today" class="planner-section">
+            <h2>Today's Plan</h2>
+            <div id="today-tasks" class="task-list"></div>
+            <button onclick="addTask('today')">Add Task</button>
+        </section>
+
+        <section id="week" class="planner-section">
+            <h2>Weekly Overview</h2>
+            <div id="week-tasks" class="task-list"></div>
+            <button onclick="addTask('week')">Add Task</button>
+        </section>
+
+        <section id="subjects" class="planner-section">
+            <h2>Subjects</h2>
+            <div id="subject-list"></div>
+            <button onclick="addSubject()">Add Subject</button>
+        </section>
+
+        <section id="goals" class="planner-section">
+            <h2>Study Goals</h2>
+            <div id="goal-list"></div>
+            <button onclick="addGoal()">Add Goal</button>
+        </section>
+
+        <section id="notes" class="planner-section">
+            <h2>Notes</h2>
+            <textarea id="study-notes"></textarea>
+        </section>
+
+        <section id="assessment" class="planner-section">
+            <h2>Assessment</h2>
+            <form id="assessment-form">
+                <label for="study-time">Preferred study time:</label>
+                <select id="study-time" name="study-time">
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
+                    <option value="night">Night</option>
+                </select><br><br>
+
+                <label for="start-learning">Usual start learning time:</label>
+                <input type="time" id="start-learning" name="start-learning"><br><br>
+
+                <label for="learning-style">Learning Style:</label>
+                <select id="learning-style" name="learning-style">
+                    <option value="visual">Visual</option>
+                    <option value="auditory">Auditory</option>
+                    <option value="kinesthetic">Kinesthetic</option>
+                </select><br><br>
+
+                <label for="concentration">Concentration Level:</label>
+                <select id="concentration" name="concentration">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select><br><br>
+
+                <label for="motivation">Motivation Level:</label>
+                <select id="motivation" name="motivation">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select><br><br>
+
+                <label for="challenges">Biggest Study Challenges:</label><br>
+                <textarea id="challenges" name="challenges"></textarea><br><br>
+
+                <button type="button" onclick="submitAssessment()">Submit Assessment</button>
+            </form>
+            <div id="assessment-results" style="display:none;">
+                <h3>Assessment Results</h3>
+                <p id="results-text"></p>
+                <button onclick="window.print()">Print Results</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Study Planner</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

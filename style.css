@@ -1,0 +1,113 @@
+/* style.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom right, #f8f9fa, #f2f3f5); /* Very light gray/white gradient */
+    color: #4b253a;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #d085af;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+.planner-section {
+    background-color: #ffffff; /* Changed to white */
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+}
+
+.planner-section:hover {
+    transform: translateY(-5px);
+}
+
+.planner-section h2 {
+    color: #673ab7; /* Consistent purple for headings */
+    margin-bottom: 15px;
+}
+
+.task-list {
+    border: 1px solid #ddd;
+    padding: 15px;
+    min-height: 100px;
+    border-radius: 8px;
+}
+
+button, #assessment-results button { /* Consistent button styles */
+    background-color: #673ab7;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover, #assessment-results button:hover {
+    background-color: #512da8;
+    transform: scale(1.02);
+}
+
+footer {
+    background-color: #424242;
+    color: white;
+    text-align: center;
+    padding: 1.2rem 0;
+    margin-top: auto;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    resize: vertical;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Assessment form styles */
+#
